@@ -1,30 +1,37 @@
 import SwiftUI
 
-struct Response: Codable {
-  var items: [Result]
-}
-
-struct Result: Codable {
-  var id: Int
-  var name: String
-//  var collectionName: String
-}
+/*
+ - название репозитория
+ - описание
+ - язык программирования
+ - количество звезд
+ - количество форков
+ - информация о лицензии
+ */
 
 struct ContentView: View {
   
-  @State private var results = [Result]()
+  @State private var items = [Item]()
   
   var body: some View {
-    List(results, id: \.id) { item in
-      VStack(alignment: .leading) {
-        Text(item.name)
-          .font(.headline)
-//        Text(item.collectionName)
-//          .foregroundColor(.secondary)
+    NavigationView {
+    List(items, id: \.id) { item in
+      NavigationLink(destination: DetailView(item: item)) {
+        VStack(alignment: .leading) {
+          Text(item.name)
+            .font(.headline)
+          Text("language: \(item.language ?? "Unknown language")")
+            .foregroundColor(.secondary)
+          Text("Stars: \(item.stargazers_count ?? 0)")
+          Text("Forks: \(item.forks_count ?? 1)")
+          Text("License: \(item.license?.name ?? "Unknown license")")
+        }
       }
     }
     .onAppear {
       loadData()
+    }
+    .navigationTitle("Git Search")
     }
     
   }
@@ -40,7 +47,7 @@ struct ContentView: View {
       if let data = data {
         if let results = try? JSONDecoder().decode(Response.self, from: data) {
           DispatchQueue.main.async {
-            self.results = results.items
+            self.items = results.items
           }
           return
         }
