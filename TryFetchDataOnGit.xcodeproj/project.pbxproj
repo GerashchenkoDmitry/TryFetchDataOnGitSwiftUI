@@ -13,6 +13,7 @@
 		DFD9CDA4268BB756001EB1C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD9CDA3268BB756001EB1C5 /* Preview Assets.xcassets */; };
 		DFD9CDAD268BB763001EB1C5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDAC268BB763001EB1C5 /* Service.swift */; };
 		DFD9CDB5268DE733001EB1C5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDB4268DE733001EB1C5 /* DetailView.swift */; };
+		DFD9CDB8268F2BB5001EB1C5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDB7268F2BB5001EB1C5 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DFD9CDA5268BB756001EB1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFD9CDAC268BB763001EB1C5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		DFD9CDB4268DE733001EB1C5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DFD9CDB7268F2BB5001EB1C5 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				DFD9CD9E268BB74C001EB1C5 /* ContentView.swift */,
 				DFD9CDB4268DE733001EB1C5 /* DetailView.swift */,
 				DFD9CDAC268BB763001EB1C5 /* Service.swift */,
+				DFD9CDB7268F2BB5001EB1C5 /* RemoteImage.swift */,
 				DFD9CDA0268BB756001EB1C5 /* Assets.xcassets */,
 				DFD9CDA5268BB756001EB1C5 /* Info.plist */,
 				DFD9CDA2268BB756001EB1C5 /* Preview Content */,
@@ -147,6 +150,7 @@
 				DFD9CD9F268BB74C001EB1C5 /* ContentView.swift in Sources */,
 				DFD9CDB5268DE733001EB1C5 /* DetailView.swift in Sources */,
 				DFD9CD9D268BB74B001EB1C5 /* TryFetchDataOnGitApp.swift in Sources */,
+				DFD9CDB8268F2BB5001EB1C5 /* RemoteImage.swift in Sources */,
 				DFD9CDAD268BB763001EB1C5 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

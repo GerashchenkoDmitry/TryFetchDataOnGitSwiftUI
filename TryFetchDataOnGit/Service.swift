@@ -14,6 +14,7 @@ struct Response: Codable {
 struct Item: Codable {
   var id: Int
   var name: String
+  var owner: Owner
   var description: String
   var language: String?
   var stargazers_count: Int?
@@ -24,4 +25,11 @@ struct Item: Codable {
 struct License: Codable {
   var name: String?
   var url: String?
+}
+
+struct Owner: Codable {
+  var id: Int
+  var login: String
+  var avatar_url: String
+  var type: String?
 }
