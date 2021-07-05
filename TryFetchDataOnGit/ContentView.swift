@@ -27,7 +27,7 @@ struct ContentView: View {
               self.showCancelButton = true
             }, onCommit: {
               print("onCommit")
-              self.loadData()
+              self.loadData(description: searchText)
             }).foregroundColor(.primary)
             
             Button(action: {
@@ -77,8 +77,8 @@ struct ContentView: View {
     
   }
   
-  func loadData() {
-    guard let url = URL(string: "https://api.github.com/search/repositories?q=Star+Wars") else {
+  func loadData(description: String) {
+    guard let url = URL(string: "https://api.github.com/search/repositories?q=\(description.replacingOccurrences(of: " ", with: "+"))") else {
       print("Invalid URL")
       return
     }
