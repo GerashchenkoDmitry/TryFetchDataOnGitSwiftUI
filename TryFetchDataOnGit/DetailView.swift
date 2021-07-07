@@ -14,22 +14,22 @@ struct DetailView: View {
   var body: some View {
     GeometryReader { geometry in
       VStack(alignment: .center, spacing: 10) {
-        RemoteImage(url: item.owner.avatar_url)
+        RemoteImage(url: item.owner?.avatar_url ?? "Unknown url")
           .aspectRatio(contentMode: .fit)
           .foregroundColor(.gray)
           .clipShape(Circle())
           .frame(width: geometry.size.width, height: 200)
           
           
-        Text(item.owner.login)
+        Text(item.owner?.login ?? "Unknown user")
         
         VStack(alignment: .leading, spacing: 12) {
-          Text("Repository name: \(item.name)")
+          Text("Repository name: \(item.name ?? "Unknown name")")
             .font(.headline)
           Text("Language: \(item.language ?? "Unknown")")
           
-          Text("Description: \(item.description)")
-            .navigationTitle(item.name)
+          Text("Description: \(item.description ?? "Unknown description")")
+            .navigationTitle(item.name ?? "Unknown name")
         }
         .padding(10)
       }

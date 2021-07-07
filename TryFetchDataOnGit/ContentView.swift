@@ -11,6 +11,8 @@ import SwiftUI
 
 struct ContentView: View {
   
+  @ObservableObject var item = RepositoryViewModel()
+  
   @State private var searchText = ""
   @State private var showCancelButton: Bool = false
   
@@ -57,7 +59,7 @@ struct ContentView: View {
         List(items, id: \.id) { item in
           NavigationLink(destination: DetailView(item: item)) {
             VStack(alignment: .leading) {
-              Text(item.name)
+              Text(item.name ?? "Unknown name")
                 .font(.headline)
               Text("language: \(item.language ?? "Unknown language")")
                 .foregroundColor(.secondary)
@@ -68,9 +70,6 @@ struct ContentView: View {
           }
         }
         .listStyle(PlainListStyle())
-//        .onAppear {
-//          loadData()
-//        }
         .navigationTitle("Git Search")
       }
     }

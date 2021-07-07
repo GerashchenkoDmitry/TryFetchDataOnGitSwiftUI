@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF339AFE2694323900479359 /* GitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF339AFD2694323900479359 /* GitAPI.swift */; };
+		DF339B0126944B5F00479359 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF339B0026944B5F00479359 /* RepositoryViewModel.swift */; };
 		DFD9CD9D268BB74B001EB1C5 /* TryFetchDataOnGitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CD9C268BB74B001EB1C5 /* TryFetchDataOnGitApp.swift */; };
 		DFD9CD9F268BB74C001EB1C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CD9E268BB74C001EB1C5 /* ContentView.swift */; };
 		DFD9CDA1268BB756001EB1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD9CDA0268BB756001EB1C5 /* Assets.xcassets */; };
 		DFD9CDA4268BB756001EB1C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD9CDA3268BB756001EB1C5 /* Preview Assets.xcassets */; };
-		DFD9CDAD268BB763001EB1C5 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDAC268BB763001EB1C5 /* Service.swift */; };
+		DFD9CDAD268BB763001EB1C5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDAC268BB763001EB1C5 /* Item.swift */; };
 		DFD9CDB5268DE733001EB1C5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDB4268DE733001EB1C5 /* DetailView.swift */; };
 		DFD9CDB8268F2BB5001EB1C5 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD9CDB7268F2BB5001EB1C5 /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF339AFD2694323900479359 /* GitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAPI.swift; sourceTree = "<group>"; };
+		DF339B0026944B5F00479359 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 		DFD9CD99268BB74B001EB1C5 /* TryFetchDataOnGit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryFetchDataOnGit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD9CD9C268BB74B001EB1C5 /* TryFetchDataOnGitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryFetchDataOnGitApp.swift; sourceTree = "<group>"; };
 		DFD9CD9E268BB74C001EB1C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DFD9CDA0268BB756001EB1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFD9CDA3268BB756001EB1C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFD9CDA5268BB756001EB1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFD9CDAC268BB763001EB1C5 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DFD9CDAC268BB763001EB1C5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		DFD9CDB4268DE733001EB1C5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DFD9CDB7268F2BB5001EB1C5 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +65,9 @@
 				DFD9CD9C268BB74B001EB1C5 /* TryFetchDataOnGitApp.swift */,
 				DFD9CD9E268BB74C001EB1C5 /* ContentView.swift */,
 				DFD9CDB4268DE733001EB1C5 /* DetailView.swift */,
-				DFD9CDAC268BB763001EB1C5 /* Service.swift */,
+				DFD9CDAC268BB763001EB1C5 /* Item.swift */,
+				DF339AFD2694323900479359 /* GitAPI.swift */,
+				DF339B0026944B5F00479359 /* RepositoryViewModel.swift */,
 				DFD9CDB7268F2BB5001EB1C5 /* RemoteImage.swift */,
 				DFD9CDA0268BB756001EB1C5 /* Assets.xcassets */,
 				DFD9CDA5268BB756001EB1C5 /* Info.plist */,
@@ -148,10 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD9CD9F268BB74C001EB1C5 /* ContentView.swift in Sources */,
+				DF339B0126944B5F00479359 /* RepositoryViewModel.swift in Sources */,
+				DF339AFE2694323900479359 /* GitAPI.swift in Sources */,
 				DFD9CDB5268DE733001EB1C5 /* DetailView.swift in Sources */,
 				DFD9CD9D268BB74B001EB1C5 /* TryFetchDataOnGitApp.swift in Sources */,
 				DFD9CDB8268F2BB5001EB1C5 /* RemoteImage.swift in Sources */,
-				DFD9CDAD268BB763001EB1C5 /* Service.swift in Sources */,
+				DFD9CDAD268BB763001EB1C5 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
