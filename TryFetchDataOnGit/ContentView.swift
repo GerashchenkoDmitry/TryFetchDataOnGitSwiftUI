@@ -1,17 +1,8 @@
 import SwiftUI
 
-/*
- - название репозитория
- - описание
- - язык программирования
- - количество звезд
- - количество форков
- - информация о лицензии
- */
-
 struct ContentView: View {
   
-  @ObservableObject var item = RepositoryViewModel()
+  @ObservedObject var item = RepositoryViewModel()
   
   @State private var searchText = ""
   @State private var showCancelButton: Bool = false
@@ -28,7 +19,6 @@ struct ContentView: View {
             TextField("search", text: $searchText, onEditingChanged: { isEditing in
               self.showCancelButton = true
             }, onCommit: {
-              print("onCommit")
               self.loadData(description: searchText)
             }).foregroundColor(.primary)
             
@@ -45,7 +35,7 @@ struct ContentView: View {
           
           if showCancelButton  {
             Button("Cancel") {
-              UIApplication.shared.endEditing(true) // this must be placed before the other commands here
+              UIApplication.shared.endEditing(true)
               self.searchText = ""
               self.showCancelButton = false
             }
@@ -54,7 +44,8 @@ struct ContentView: View {
         }
         
         .padding(.horizontal)
-        .navigationBarHidden(showCancelButton) // .animation(.default) // animation does not work properly
+        .navigationBarHidden(showCancelButton)
+        // .animation(.default) // animation does not work properly
         
         List(items, id: \.id) { item in
           NavigationLink(destination: DetailView(item: item)) {

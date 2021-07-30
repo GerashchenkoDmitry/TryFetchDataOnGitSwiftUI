@@ -39,6 +39,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView(item: Item(id: 20, name: "Repo name",owner: Owner(id: Int(arc4random()), login: "Owner login", avatar_url: "person", type: "public"), description: "About repo", language: "Swift", stargazers_count: 12, forks_count: 3, license: License(name: "MIT License")))
+//    DetailView(item: Item(id: 20, name: "Repo name",owner: Owner(id: Int(arc4random()), login: "Owner login", avatar_url: "person", type: "public"), description: "About repo", language: "Swift", stars: 12, forks: 3, license: License(name: "MIT License")))
+    DetailView(item: Item(id: 20, name: "Repo name", owner: Owner(id: Int(arc4random()), login: "Owner login", avatar_url: "person", type: "public"), description: "About repo", language: "Swift", stargazers_count: 1, forks_count: 1, license: License(name: "MIT")))
   }
 }
